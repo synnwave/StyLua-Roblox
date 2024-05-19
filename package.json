@@ -21,12 +21,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@angablue/exe": "^2.1.1",
     "@johnnymorganz/stylua": "^0.20.0",
-    "@yao-pkg/pkg": "^5.11.0",
-    "express": "^4.18.2",
-    "node-hide-console-window": "^2.2.0",
-    "patch-package": "^8.0.0",
-    "trayicon": "^1.2.2"
+    "express": "^4.18.2"
   }
 }

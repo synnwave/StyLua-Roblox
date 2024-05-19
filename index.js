@@ -1,8 +1,6 @@
 const express = require("express");
 const StyLua = require("@johnnymorganz/stylua");
 const app = express();
-const Tray = require("trayicon");
-const ConsoleWindow = require("node-hide-console-window");
 const fs = require("fs");
 const path = require("path");
 
@@ -51,17 +49,3 @@ app.post("/stylua", (req, res) => {
 app.listen(18259, () => {
   console.log("Server started on port 18259");
 });
-
-Tray.create(
-  {
-    icon: fs.readFileSync(
-      path.join(path.dirname(__filename), "assets/icon.ico")
-    ),
-    title: "StyLua",
-  },
-  function (tray) {
-    tray.setMenu(tray.item("Quit", () => process.exit(0)));
-  }
-);
-
-ConsoleWindow.hideConsole();
